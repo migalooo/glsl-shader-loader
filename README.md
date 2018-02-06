@@ -1,7 +1,3 @@
-[![npm][npm]][npm-url]
-[![node][node]][node-url]
-[![deps][webpack]][webpack-url]
-
 # GLSL Shader Loader
 The loader will import separate shader file as javascript string.
 
@@ -42,7 +38,7 @@ const shader = gl.createShader(gl.VERTEX_SHADER)
 gl.shaderSource(shader, vertexShaderSource)
 ...
 const shader = gl.createShader(gl.FRAGMENT_SHADER)
-gl.shaderSource(shader, fragmentShader)
+gl.shaderSource(shader, fragmentShaderSource)
 ...
 
 // vertexShader.glsl
@@ -75,8 +71,7 @@ void main() {
 
 // shaderFunctions.glsl
 float plot (vec2 coord, float color){
-  return  smoothstep( color-0.01, color, coord.y) -
-          smoothstep( color, color+0.01, coord.y);
+  return  smoothstep( color-0.01, color, coord.y) - smoothstep( color, color+0.01, coord.y);
 }
 vec2 distance (vec2 coord){
   ...
