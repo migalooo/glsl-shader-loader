@@ -1,11 +1,12 @@
 {
   "name": "glsl-shader-loader",
   "author": "migaloo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Migaloo",
   "description": "glsl loader module for webpack",
   "license": "MIT",
   "main": "index.js",
+  "readmeFilename": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
