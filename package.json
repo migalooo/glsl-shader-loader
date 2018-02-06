@@ -1,0 +1,13 @@
+{
+  "name": "glsl-shader-loader",
+  "author": "migaloo",
+  "version": "0.0.2",
+  "author": "Migaloo",
+  "description": "glsl loader module for webpack",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/webpack/file-loader.git"
+}
