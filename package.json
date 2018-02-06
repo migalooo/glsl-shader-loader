@@ -9,5 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/webpack/file-loader.git"
+  "repository": "https://github.com/migalooo/glsl-shader-loader.git",
+  "engines": {
+    "node": ">= 6.0.0"
+  }
 }
