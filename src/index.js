@@ -38,8 +38,6 @@ module.exports = function(source){
       selector.add(fristAnchor, snippets.reverse(), false)
     }
 
-    const importNodes = selector.all(ast, ) 
-
     // Remove #pragma loader:
     ast.statements
       .forEach(node => {
