@@ -1,17 +1,33 @@
 {
   "name": "glsl-shader-loader",
-  "author": "migaloo",
-  "version": "0.0.3",
-  "author": "Migaloo",
-  "description": "glsl loader module for webpack",
+  "description": "A webpack loader for nested import shader functions",
+  "author": "Migaloo <migalooo@yahoo.com>",
+  "version": "0.1.0",
+  "keywords": [
+    "glsl",
+    "shader",
+    "webgl",
+    "module",
+    "webpack",
+    "loader",
+    "import"
+  ],
   "license": "MIT",
   "main": "index.js",
-  "readmeFilename": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/migalooo/glsl-shader-loader.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/migalooo/glsl-shader-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/migalooo/glsl-shader-loader/issues"
+  },
   "engines": {
     "node": ">= 6.0.0"
+  },
+  "dependencies": {
+    "glsl-man": "^1.1.14"
   }
 }
