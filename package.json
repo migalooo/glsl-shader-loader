@@ -15,7 +15,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "webpack --config ./test/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,7 @@
   "bugs": {
     "url": "https://github.com/migalooo/glsl-shader-loader/issues"
   },
-  "engines": {
-    "node": ">= 6.0.0"
-  },
-  "dependencies": {
+  "peerDependencies": {
     "glsl-man": "^1.1.14"
   }
 }
