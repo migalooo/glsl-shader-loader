@@ -4,8 +4,7 @@ before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
 before_script:
-  - yarn global add webpack webpack-cli
-  - yarn add webpack
+  - yarn add webpack@3.8.1
   - yarn install
   - yarn run test 
 node_js:
