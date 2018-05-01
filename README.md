@@ -48,7 +48,7 @@ You can import GLSL functions with `#pragma loader:` statements in `.glsl` file
   - In case two functions have the same name, only import once
   - Imported function will replace the position of import statement in order
 
-#### Example:
+### Example
 
 A directory structured like this:
 ```
