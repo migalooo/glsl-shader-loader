@@ -1,6 +1,6 @@
 {
   "name": "glsl-shader-loader",
-  "description": "A webpack loader for nested import shader functions",
+  "description": "A static shader source bundler for WebGL program",
   "author": "Migaloo <migalooo@yahoo.com>",
   "version": "0.1.0",
   "keywords": [
@@ -8,6 +8,7 @@
     "shader",
     "webgl",
     "module",
+    "component",
     "webpack",
     "loader",
     "import"
@@ -15,7 +16,8 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --config ./test/webpack.config.js"
+    "test": "node ./test/webpack.config.js",
+    "dev": "node --inspect=9047 ./test/webpack.config.js"
   },
   "repository": {
     "type": "git",

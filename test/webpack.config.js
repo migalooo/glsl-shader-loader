@@ -1,6 +1,8 @@
-const path = require('path');
+const path = require('path')
+const webpack = require('webpack')
 
-module.exports = {
+webpack({
+  mode: 'development',
   entry: path.resolve(__dirname, './app.js'),
   output: {
     filename: '[name].js',
@@ -16,4 +18,12 @@ module.exports = {
       }
     ]
   }
-}
+},(err, stats) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+  console.log(stats.toString({
+    colors: true
+  }))
+})

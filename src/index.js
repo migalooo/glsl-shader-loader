@@ -14,10 +14,12 @@ module.exports = function(source){
     anchor: []
   }
 
-  const ast =  glsl.parse(source)
+  const ast = glsl.parse(source)
+
   parser(this, this.context, ast, cacheNodes, true, function(err, isRoot) {
-    if (err)  return callback(err)
+    if (err) return callback(err)
     const {anchor, snippets} = cacheNodes
+
     // No import return source
     if (anchor.length === 0) return callback(null, `module.exports = ${JSON.stringify(source)}`)
 
@@ -39,10 +41,13 @@ module.exports = function(source){
     }
 
     // Remove #pragma loader:
+    const removeNodes = []
     ast.statements
       .forEach(node => {
-        if (node.directive === '#pragma' &&  node.value.match(/^loader\:/)) selector.remove(node) 
+        if (node.directive === '#pragma' &&  node.value.match(/^loader\:/)) removeNodes.push(node)
       })
+
+    selector.remove(removeNodes) 
 
     return callback(null, `module.exports = ${JSON.stringify(glsl.string(ast))}`)
   })

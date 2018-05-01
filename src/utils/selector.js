@@ -18,7 +18,13 @@ function add(anchor, node, after) {
 }
 
 function remove(node) {
-  glsl.mod.remove(node)
+  if(node instanceof Array) {
+    node.forEach(d => {
+      glsl.mod.remove(d)
+    })
+  } else {
+    glsl.mod.remove(node)
+  }
 }
 
 module.exports = {
