@@ -1,5 +1,6 @@
 # GLSL Shader Loader
 ![Build Status](https://travis-ci.org/migalooo/glsl-shader-loader.svg?branch=master) ![Build Status](https://img.shields.io/badge/node-%3E%3D%20v6.0.0-blue.svg)
+
 This is a static shader source bundler for WebGL program, make a possibility for manage your shader source by creating separate files.
 > glsl-shader-loader for [Webpack](https://webpack.js.org/concepts/), support for import **GLSL functions** from files and generates a shader string for WebGL program.
 
@@ -36,10 +37,10 @@ module: {
 ### Usage
 You can import GLSL functions with `#pragma loader:` statements in `.glsl` file
 - Import specified function by name
-  <span style="color:#0996de;font-weight:600;">`#pragma loader: import {nameA, nameB} from './file.glsl';`</span>
+  `#pragma loader: import {nameA, nameB} from './file.glsl';`
 
 - Import the only function in file by a new name
-  <span style="color:#0996de;font-weight:600;">`#pragma loader: import rename from './file.glsl';`</span>
+  `#pragma loader: import rename from './file.glsl';`
 
 - **NOTE**:
   - Only if there is a single function in `.glsl` file will you be able to rename it 
@@ -69,7 +70,7 @@ gl.shaderSource(fragmentShader, fragmentShaderSource)
 
 
 In shader code **fragmentShaderSource.glsl**, import `randomDirection` and `spotLight` from file:
-```
+```glsl
 precision mediump float;
 
 varying vec4 v_color;
@@ -90,7 +91,7 @@ void main() {
 ```
 
 **light.glsl**
-```
+```c
 vec3 spotLight (vec3 direction vec3 normal) {
   ...
   return spot;
@@ -111,7 +112,7 @@ vec3 random(vec2 range) {
 ```
 
 `import fragmentShaderSource from './fragmentShaderSource.glsl'` Will return this JavaScript string:
-```
+```c
 precision mediump float;
 
 varying vec4 v_color;
