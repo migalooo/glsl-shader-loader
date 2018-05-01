@@ -91,7 +91,7 @@ void main() {
 ```
 
 **light.glsl**
-```c
+```glsl
 vec3 spotLight (vec3 direction vec3 normal) {
   ...
   return spot;
@@ -104,7 +104,7 @@ vec3 ambientLight (vec3 direction vec3 normal) {
 ```
 
 **random.glsl**
-```
+```glsl
 vec3 random(vec2 range) {
   ...
   return random;
@@ -112,7 +112,7 @@ vec3 random(vec2 range) {
 ```
 
 `import fragmentShaderSource from './fragmentShaderSource.glsl'` Will return this JavaScript string:
-```c
+```glsl
 precision mediump float;
 
 varying vec4 v_color;
