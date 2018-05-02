@@ -16,7 +16,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "node ./test/webpack.test.js",
+    "test": "webpack --config ./test/webpack.test.js",
     "dev": "node --inspect=9047 ./test/webpack.debug.js"
   },
   "repository": {

@@ -11,7 +11,7 @@ webpack({
   module: {
     rules: [
       {
-        test: /\.glsl$/,
+        test: /\.(frag|vert|glsl)$/,
         use: {
           loader: path.resolve(__dirname, '../index.js')
         }

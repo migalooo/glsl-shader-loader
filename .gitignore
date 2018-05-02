@@ -1,5 +1,5 @@
 node_modules/
-dist/*
+dist/*.js
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

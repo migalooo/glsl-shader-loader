@@ -23,7 +23,7 @@ In your webpack configuration:
 ```js
 module: {
   rules: [{
-    test: /\.glsl$/,
+    test: /\.(frag|vert|glsl)$/,
     use: [
       { 
         loader: 'glsl-shader-loader',

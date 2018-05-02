@@ -1,7 +1,6 @@
 const path = require('path')
 
 module.exports = {
-  mode: 'development',
   entry: path.resolve(__dirname, './app.js'),
   output: {
     filename: '[name].js',
@@ -10,7 +9,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.glsl$/,
+        test: /\.(frag|vert|glsl)$/,
         use: {
           loader: path.resolve(__dirname, '../index.js')
         }
