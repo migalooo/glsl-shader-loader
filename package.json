@@ -2,7 +2,7 @@
   "name": "glsl-shader-loader",
   "description": "A static shader source bundler for WebGL program, provide a possibility for management shader source by creating separate files.",
   "author": "Migaloo <migalooo@yahoo.com>",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "glsl",
     "shader",
@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/migalooo/glsl-shader-loader/issues"
   },
-  "dependencies": {
+  "peerDependencies": {
     "glsl-man": "^1.1.14"
   }
 }
