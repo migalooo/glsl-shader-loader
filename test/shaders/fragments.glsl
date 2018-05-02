@@ -16,6 +16,7 @@ uniform float u_time;
 #pragma loader: import {random} from './collections/random.glsl';
 
 #pragma loader: import {noise} from './collections/noise.glsl';
+
 #define OCTAVES 6
 #pragma loader: import freq from './collections/fbm.glsl';
 

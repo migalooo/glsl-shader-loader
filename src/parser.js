@@ -1,5 +1,5 @@
-const glsl = require('glsl-man')
 const path = require('path')
+const astGenerator = require('./utils/ast-generator.js').astGenerator
 const parseImportString   = require('./utils/parse-import-string.js')
 const extractShaderSource = require('./utils/extract-shader-source.js')
 const cacheImportSnippets = require('./utils/cache-import-snippets.js')
@@ -30,12 +30,14 @@ module.exports = function parser(loader, filePath, ast, cacheNodes, isRoot, call
   // Import shader source 
   Promise.all(importInfoArr.map(data => extractShaderSource(loader, data.path)))
     .then(shaderSources => {
-      return Promise.all(shaderSources.map((source, i) => {
-        const astLeaf = glsl.parse(source)
-        cacheImportSnippets(astLeaf, isRoot, importInfoArr[i], cacheNodes, callback)
-        const dirname = path.dirname(importInfoArr[i].path)
-        return deepParser(parser, loader, astLeaf, dirname, cacheNodes)
-      }))
+        return Promise.all(shaderSources.map((source, i) => {
+            const filePath = importInfoArr[i].path
+            const dirname = path.dirname(filePath)
+            const astLeaf = astGenerator(source, filePath)
+
+            cacheImportSnippets(astLeaf, isRoot, importInfoArr[i], cacheNodes, callback)
+            return deepParser(parser, loader, astLeaf, dirname, cacheNodes)
+        }))
     })
     .then(info => {
       return callback(null)

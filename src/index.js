@@ -1,6 +1,7 @@
 const glsl = require('glsl-man')
 const parser = require('./parser.js')
 const selector = require('./utils/selector.js')
+const astGenerator = require('./utils/ast-generator.js').astGenerator
 
 module.exports = function(source){
   this.cacheable && this.cacheable()
@@ -14,7 +15,7 @@ module.exports = function(source){
     anchor: []
   }
 
-  const ast = glsl.parse(source)
+  const ast = astGenerator(source, this.resourcePath)
 
   parser(this, this.context, ast, cacheNodes, true, function(err, isRoot) {
     if (err) return callback(err)
