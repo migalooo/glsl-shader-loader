@@ -1,15 +1,15 @@
 # GLSL Shader Loader
 ![Build Status](https://travis-ci.org/migalooo/glsl-shader-loader.svg?branch=master) ![Build Status](https://img.shields.io/badge/node-%3E%3D%20v6.0.0-blue.svg)
 
-This is a static shader source bundler for WebGL program, make a possibility for manage your shader source by creating separate files.
-> glsl-shader-loader for [Webpack](https://webpack.js.org/concepts/), support for import **GLSL functions** from files and generates a shader string for WebGL program.
+This is a static shader source bundler for WebGL program, provide a possibility for management shader source by creating separate files.
+> glsl-shader-loader for [Webpack](https://webpack.js.org/concepts/), supports for import **GLSL functions** from file and generates a shader string for WebGL program.
 
-**GLSL Shader Loader** provid many features as following.
+**GLSL Shader Loader** provids many features as following.
 - Allow import `.glsl` source file as a Javacript string for WebGL program 
 - Support `import` [statement](#usage) in `.glsl` file that can extract GLSL functions from other files (includes nested reference)
 - Remove invalid import if the function will not be called 
 - Repeated functions are imported only once
-- Syntax tree analysis
+- Syntax tree analysis and error detection
 
 ---
 
@@ -37,10 +37,10 @@ module: {
 ### Usage
 You can import GLSL functions with `#pragma loader:` statements in `.glsl` file
 - Import specified function by name
-  `#pragma loader: import {nameA, nameB} from './file.glsl';`
+  **`#pragma loader: import {nameA, nameB} from './file.glsl';`**
 
 - Import the only function in file by a new name
-  `#pragma loader: import rename from './file.glsl';`
+  **`#pragma loader: import rename from './file.glsl';`**
 
 - **NOTE**:
   - Only if there is a single function in `.glsl` file will you be able to rename it 
