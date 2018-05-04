@@ -51,9 +51,9 @@ You can import GLSL functions with `#pragma loader:` statements in `.glsl` file
 ### Options
 | Name | Type | Default | Description |
 |------|:----:|:--------:|:-----------|
-| [root](#options-root) | {String} | undefined | Specify the root path of source |
+| [root](#`root`) | {String} | undefined | Specify the root path of source |
 
-<h3 id="options-root">`root`</h3>
+### `root`
 
 configuration:
 ```javascript
