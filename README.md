@@ -48,6 +48,25 @@ You can import GLSL functions with `#pragma loader:` statements in `.glsl` file
   - In case two functions have the same name, only import once
   - Imported function will replace the position of import statement in order
 
+### Options
+| Name | Type | Default | Description |
+|------|:----:|:--------:|:-----------|
+| [root](#options-root) | {String} | undefined | Specify the root path of source |
+
+<h3 id="options-root">`root`</h3>
+
+configuration:
+```javascript
+{ 
+  loader: 'glsl-shader-loader',
+  options: {
+    root: '/src/shaders' 
+  }
+}
+```
+Use `/` redirect to the specified directory.
+> e.g. `#pragma loader: import {light} from '/lights.glsl';` will search `lights.glsl` under the path `projectRoot/src/shaders/`
+
 ### Example
 
 A directory structured like this:

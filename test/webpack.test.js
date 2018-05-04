@@ -13,6 +13,7 @@ module.exports = {
         use: {
           loader: path.resolve(__dirname, '../index.js'),
           options: {
+            root: '/test/shaders/collections'
           }
         }
       }

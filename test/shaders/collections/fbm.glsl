@@ -1,4 +1,4 @@
-#pragma loader: import {plot} from './draw.glsl';
+#pragma loader: import {plot} from '/draw.glsl';
 
 float fbm (in vec2 st) {
   float value = 0.0;
