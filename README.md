@@ -51,7 +51,7 @@ You can import GLSL functions with `#pragma loader:` statements in `.glsl` file
 ### Options
 | Name | Type | Default | Description |
 |------|:----:|:--------:|:-----------|
-| [root](#`root`) | {String} | undefined | Specify the root path of source |
+| [root](#root) | {String} | undefined | Specify the root path of source |
 
 ### `root`
 
