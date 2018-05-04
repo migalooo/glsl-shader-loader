@@ -11,7 +11,9 @@ module.exports = {
       {
         test: /\.(frag|vert|glsl)$/,
         use: {
-          loader: path.resolve(__dirname, '../index.js')
+          loader: path.resolve(__dirname, '../index.js'),
+          options: {
+          }
         }
       }
     ]

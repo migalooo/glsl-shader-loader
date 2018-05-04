@@ -27,6 +27,7 @@
     "url": "https://github.com/migalooo/glsl-shader-loader/issues"
   },
   "dependencies": {
-    "glsl-man": "^1.1.14"
+    "glsl-man": "^1.1.14",
+    "loader-utils": "^1.1.0"
   }
 }
