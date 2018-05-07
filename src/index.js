@@ -21,9 +21,6 @@ module.exports = function(source){
     if (err) return callback(err)
     const {anchor, snippets} = cacheNodes
 
-    // No import return source
-    if (anchor.length === 0) return callback(null, `module.exports = ${JSON.stringify(source)}`)
-
     // Insert root import shader code
     if (anchor.length !== 0) {
       anchor.forEach((node, i) => {
